@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aploo - Ready to Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" href="style.css" >
+  <link rel="icon" href="img/logo.svg" type="image/gif" sizes="16x16">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+
+
+<!--******************************** Style****************** -->
+<style>
+  body{
+    font-family: 'Roboto', sans-serif;
+  }
+    .heading{
+        font-family: 'Roboto', sans-serif;
+    }
+    .no-glow{
+     
+     
+      outline: 0;
+      box-shadow: none;
+      border: 0px;
+    }
+    .no-glow:focus{
+      border: transparent;
+      border-style: solid;
+      border-color: transparent;
+    }
+    .button-1{
+      outline: 0;
+    box-shadow: none;
+    margin-block-start: 1rem;
+    min-height: 2.5rem;
+    border: solid transparent;
+    width: max-content;
+    outline: transparent;
+    border-width: 0.5px;
+    box-shadow: none;
+    border-style: solid 5px;
+    border-color: transparent;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    vertical-align: middle;
+
+    border-color: rgb(3,63,255);
+    background-color: white;
+    color: rgb(3,63,255);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    }
+    .button-1:focus{
+      outline: 0;
+  box-shadow: none;
+    
+  color: rgb(44, 206, 218);
+    }
+    .button-1:hover{
+
+    border-color: white;
+    background-color: rgb(3,63,255);
+    color: white;
+    }
+
+    .button-more{
+
+    }
+
+    .button-blue
+    {
+    margin-block-start: 1rem;
+    min-height: 1.5rem;
+    border: solid transparent;
+    width: initial;
+    outline: none;
+    border-width: 0.5px;
+    box-shadow: none;
+    border-style: solid;
+    border-color: transparent;
+    padding: 0.2rem 0.7rem;
+    vertical-align: middle;
+    background-color: white;
+    cursor: pointer;
+    }
+.icon{
+    
+    color:white;
+    font-size: 1rem;
+    color: rgb(13, 165, 224);
+}
+.round{
+    
+    text-align: center;
+    max-width: 2rem !important;
+    border-radius: 2px;
+    background-color: ;
+}
+.input{
+    border: solid white;
+    border-color: transparent;
+    border-style: solid white;
+    outline: none;
+    padding-top: 1rem !important;
+    
+}
+.about-title{
+    font-family: 'Roboto', sans-serif;
+}
+/* ********************************Form Pop Up************************************* */
+.open-button {
+  border-radius: 50%;
+  background-color: rgb(3,63,255);
+  color: white;
+  padding: 1.5ex;
+  border: none;
+  border-style: white;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  height: 3.5em;
+  right: 20px;
+  width: 4em;
+}
+.open-button:focus{
+  outline: 0;
+  box-shadow: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    li{
+        line-height:3.8em !important;
+        
+    }
+    a:hover{
+        color:rgb(73, 198, 230) !important;
+        font-size:2.8em;
+       
+    }
+}
+</style>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="background-color:white !important;color: white;border:none;">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.svg" class="logo" width="80" height="40">
+        </a>
+        <button class="navbar-toggler " style="border: solid;border-style: solid;border-color: transparent;box-shadow: none;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon " ></span>
+        </button>
+      
+        <div class="collapse navbar-collapse " style="background-color: white;" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto ">
+            <li class="nav-item active">
+              <a class="nav-link d-flex justify-content-center" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-flex justify-content-center" href="#service">Service</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex justify-content-center" href="#cat">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex justify-content-center" href="#work">Working</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex justify-content-center" href="#about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link d-flex justify-content-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#about">Pricing</a>
+                <a class="dropdown-item" href="#about">Blog</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#about">Privacy</a>
+              </div>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link d-flex justify-content-center m-3 disabled" href="#" tabindex="-1" aria-disabled="true">
+                  <svg width="2em" style="color: rgb(3,63,255);" height="1.5em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                 </svg>
+                 <label>Aploo</label>
+            </a>
+            </li> -->
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+          </form>
+        </div>
+      </nav>  
+<!-- *************************************************************** Body ******************************************************************** -->
+<div class="container-fluid" >
+    <div class="row">   
+        <div class="col">
+        <!-- <h2 class="text-center heading">Heading Name whill be here</h2> -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-lg-6 "style="padding: 2rem;"style="padding: 0rem;">
+           <p style="font-size: 3rem;line-height: 4rem;">Providing Best Solutions To The Brands</p style="font-size: 3rem;"><br>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+            <button class="button-1">
+                Get Started
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>
+                  </svg>    
+            </button>
+        </div>   
+        <div class="col-sm-12 col-lg-6 d-flex justify-content-center" style="padding: 2rem;"> 
+            <img src="img/Humanitarian-Help2.svg" class="img-fluid" height="500" width="500">
+        </div>    
+    </div>
+</div>
+
+<!-- *****************************************************************************Service************************************************ -->
+<br>
+
+<br>
+
+
+<!-- ********************** Serives ******************* -->
+<div class="container-fluid " id="service" style="background-color: rgb(3,63,255);color: white;padding-block-end: 1em;min-height: 60vh;">
+  <div class="row" style="padding-top: 3em;padding-block-end: 2em;">
+
+    <div class="col-sm-6 "> 
+      <h2 class="text-left" style="padding-left: 2em;">Our Services</h2>
+      <div class="m-5" style="font-size: larger;margin-block-end: 5em;line-height: 4em;">
+        <div class="col">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+        </svg>
+          <span>Distribute via Person</span>
+        </div>
+        <div class="col">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+        </svg>
+          <span>Distribute via News Paper</span>
+        </div>
+        <div class="col">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+        </svg>
+          <span>Distribute via Stand Alone</span>
+        </div>
+        <div class="col">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+        </svg>
+          <span>Distribute via in Shop</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <img src="img/meeting.svg" class="img-fluid"></img>
+    </div>
+
+  </div>
+</div>
+
+<!-- *************************************************** -->
+
+<span id="cat"></span>
+
+<!-- *****************************************************Card Or images conatainer************************************************************** -->
+<div class="container-fluid" id="" style="background-color: rgb(23,22,26);color: white;font-size: 3ex;">
+    <div class="row">
+       <div class="col m-3 text-center">
+    Templates  
+      </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="background-color: rgb(23,22,26);">
+<div class="container">
+<div class="row row-cols-1 row-cols-md-4 " style="padding-top: 2em;">
+    <div class="col mb-4">
+        <div class="card">
+          <img src="img/search.svg" class="card-img-top" alt="...">
+          <div class="">
+            <h5 class="card-title text-center">Type 1</h5>
+          </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="col mb-4">
+        <div class="card">
+          <img src="img/search3.svg" class="card-img-top" alt="...">
+          <div class="">
+            <h5 class="card-title text-center">Type 2</h5>
+          </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="col mb-4">
+        <div class="card">
+          <img src="img/search2.svg" class="card-img-top" alt="...">
+          <div class="">
+            <h5 class="card-title text-center">Type 3</h5>
+          </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="col mb-4">
+        <div class="card">
+          <img src="img/search.svg" class="card-img-top" alt="...">
+          <div class="">
+            <h5 class="card-title text-center">Type 4</h5>
+          </div>
+        </div>
+    </div>
+    <!--  -->
+</div>
+</div>
+</div>
+
+<span id="work"></span>
+<!-- ****************************  Footer ************************* -->
+<div class="container-fluid d-flex justify-content-around"  style="background-color: rgb(3,63,255);min-height: 50vh;padding: 4rem;">
+    
+    <div class="row">
+        <div class="col-sm-6" style="background-color:;color: white;vertical-align: ;">
+           <h3> Let's Start Working Together!</h3><br>
+           <h6>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</h6><br>
+           <button class="button-1" style="border-color: white;">
+            Get Started
+            <svg width="1em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="col-sm-6" style="background-color:;">
+          <img src="img/think.svg" class="">
+        </div>
+    </div>
+
+</div>
+<!-- *********************************About *********************************** -->
+
+<div class="container-fluid " id="about" style="background-color: rgb(23,22,26);min-height: 60vh;padding: 0 4rem 0 4rem;color: white;">
+    <div class="text-center">
+        <h2 style="padding: 1.5rem 0 2rem 0;" class="about-title">About</h2><br>
+    </div>
+    
+<div class="row">
+    <div class="col-lg-4 col-sm-12" style="line-height: 1.2rem;margin-block-end: 1.8rem;">
+       <h5 class="about-title">Brand Name</h5>
+        <p style="font-size:small;line-height: 1.8rem;">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+        </p>
+        <button class="button-1">Read More <svg width="1em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </button>
+    </div>
+
+
+
+    <div class="col-lg-4 col-sm-12" style="line-height: 2rem;margin-block-end: 1.8rem;font-size: 1.8ex;">
+       <h5 class="about-title">Quick links</h5>
+        <div style="line-height: 1rem;">
+            <p>Home</p>
+            <p>Service</p>
+            <p>Blog</p>
+            <p>Pricing</p>   
+        </div>
+    </div>
+
+
+    <div class="col-lg-4 col-sm-12" style="margin-block-end: 1.8rem;">
+        <h5 class="about-title">Contact details</h5>
+
+        <div class="row" style="line-height: 2.5rem;">
+            <div class="col round"><svg width="1em" class="icon" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+              </svg></div>
+            <div class="col ">support@gmail.com</div>
+        </div>
+        <div class="row">
+            <div class="col round"><svg width="1em" class="icon" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+              </svg></div>
+            <div class="col">
+                <a href="tel://7045-8010-44" style="color: white;">7045-8010-44</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col round"><svg width="1em" class="icon" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg></div>
+            <div class="col">Thane Mumbai</div>
+        </div>
+    </div>
+
+
+<div class="row" style="margin-block-end: 2rem;margin-top: 3.5rem;font-family: 'PT Sans', sans-serif;font-size: 1.7ex;" >
+    <div class="col-sm-12 text-center">
+        <p> &nbsp;&nbsp; Copyright © 2020 Aploo. All Rights Reserved</p>
+    </div>
+    <div class="col-sm-12 text-center" style="font-family: 'PT Sans', sans-serif;">
+        Privacy Policy . Terms of Conditions
+    </div>
+</div>
+
+</div>
+</div>
+<!-- ***************************************************************** -->
+
+<!-- <div class="contact">
+  <button class="button-1">Contact</button>
+</div> -->
+
+
+
+<!-- *********************Form Modal*********************** -->
+<!-- Modal -->
+<style>
+.c{
+  background-: rgb(10,185,247);
+  color: white;
+}
+.c input, .c textarea{
+  background-color: ;
+  margin-block-start: 1em;
+  margin-left:2em;
+  margin-right: 2em;
+  outline-color: none !important;
+  border-style: solid !important;
+  border: 1px;
+  border-color: rgba(128, 128, 128, 0.507);
+  box-shadow: none;
+  border-radius: 0px !important;
+}
+.c input:focus,.c textarea:focus,select:focus {
+  outline: 0;
+  box-shadow: none;
+}
+</style>
+
+
+
+<div class="modal fade" id="exampleModalCenter"  tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"  role="document">
+    <div class="modal-content c" style="border-style: none;border-radius: 0px;">
+      <div class="modal-header " style="border-style: none;">
+        <h5 class="modal-title" style="padding-left: 0.8em;color: black;padding-top: 2em;" id="exampleModalLongTitle">Contact us</h5>
+        <button type="button" class="close no-glow" data-dismiss="modal" aria-label="Close">
+        <!-- <span aria-hidden="true" class="no-glow" style="color: black;">&times;</span> -->
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="POST" id="form">
+
+          <div class="row">
+            <input type="text" id="name" required placeholder="Name"  class="form-control" id="inputPassword">
+          </div>
+
+          <div class="row">
+            <input type="tel" id="mobile" required placeholder="Mobile Number" class="form-control" id="inputPassword">
+          </div>
+
+          <div class="row">
+            <textarea class="form-control" id="msg"  placeholder="Message (optional)" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+
+      </div>
+      <div class="modal-footer" style="border-style: none;padding-right: 2em;">
+        <button type="button" class="button-1" data-dismiss="modal">Cancel</button>
+        <button type="submit" class=" button-1" id="send">Send &nbsp; <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+      </div>
+     
+    </form>  
+    </div>
+  </div>
+</div>
+
+
+<!-- ====================================================================================================== -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+  $("form").submit(function(e) 
+  {
+    e.preventDefault();
+    document.getElementById('send').disabled=true;
+    document.getElementById('send').value="Sending...";
+
+    var name = $("#name").val(); 
+    var mobile = $("#mobile").val();
+    var msg = $("#msg").val();
+        
+    var dataString = 'name='+name+'&mobile='+mobile+'&msg='+msg;
+    $.ajax({
+      type:'POST',
+      data:dataString,
+      url:'sendData.php',
+      success:function(data) 
+      {   
+        //document.getElementById("getStatus").innerHTML=data;
+        document.getElementById('name').value="";
+        document.getElementById('mobile').value="";
+        document.getElementById('msg').value="";
+        alert(data);
+        document.getElementById('send').disabled=false;
+      }
+});
+});
+</script>
+<!-- ==================================================================================================== -->
+
+<!-- ************************************************************************************************************************************************ -->
+
+
+
+
+
+
+<!-- *************************************************Floating Icon************************************************************** -->
+<link rel="stylesheet" href="style/css/kc.fab.css"/>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="style/js/kc.fab.min.js"></script>
+
+
+
+
+<div class="kc_fab_wrapper" data-toggle="modal" data-target="#exampleModalCenter">
+
+</div>
+
+<script>
+    $(document).ready(function(){
+        var links = [
+            {
+                "bgcolor":"rgb(73, 198, 230)",
+                "icon":"<i class='fa fa-phone' style='font-size:1em;' aria-hidden='true'></i>"
+            }
+            
+        ]
+        $('.kc_fab_wrapper').kc_fab(links);
+    })
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
